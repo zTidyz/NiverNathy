@@ -1,0 +1,222 @@
+<!DOCTYPE html>  
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Surpresa Especial</title>
+  <!-- Importando a fonte Poppins do Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+      background-image: url('https://imgur.com/U8Y2vtv.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .container {
+      max-width: 800px;
+      width: 100%;
+      position: relative;
+      height: 100%;
+    }
+
+    .message-container {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 2s ease; /* Aumento do tempo da transição */
+    }
+
+    .bg-layer {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-size: cover;
+      background-position: center;
+      z-index: -1;
+      transition: opacity 2s ease; /* Adicionando transição suave para as imagens */
+    }
+
+    .message-container h2,
+    .message-container p {
+      color: #fff;
+      margin: 0;
+      padding: 0;
+      text-align: center;
+      width: 100%;
+    }
+
+    .message-container h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .message-container p {
+      font-size: 24px;
+      visibility: hidden;
+    }
+
+    .typing {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 5s steps(40) forwards;
+    }
+
+    .typing-second {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      width: 0;
+      animation: typing 5s steps(40) 5s forwards;
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div id="step1" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/Rg0bBtZ.jpg');"></div>
+      <h2 class="typing">Oi, Nathy!</h2>
+      <p class="typing-second">Hoje é o seu dia, e eu gostaria te dizer algumas coisas...</p>
+    </div>
+    <div id="step2" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/6G36wvN.jpg');"></div>
+      <h2 class="typing">Você mudou tudo...</h2>
+      <p class="typing-second">A sua chegada tornou a vida mais bela!</p>
+    </div>
+    <div id="step3" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/aLacR9b.jpg');"></div>
+      <h2 class="typing">Eu te acho incrível!</h2>
+      <p class="typing-second">Adoro o seu jeito, a sua energia e o quanto és talentosa!</p>
+    </div>
+    <div id="step4" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/BNBNBeo.jpg');"></div>
+      <h2 class="typing">Hoje se comemora...</h2>
+      <p class="typing-second">O dia em que você trouxe ao mundo a sua linda presença!</p>
+    </div>
+    <div id="step5" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/DVXl7PB.jpg');"></div>
+      <h2 class="typing">Obrigado, Nathy...</h2>
+      <p class="typing-second">Por ser essa pessoa maravilhosa!</p>
+    </div>
+    <div id="step6" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/NVOQg4h.jpg');"></div>
+      <h2 class="typing">O meu desejo...</h2>
+      <p class="typing-second">É que você sinta o quanto é especial!</p>
+    </div>
+    <div id="step7" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/Y1FqiwM.jpg');"></div>
+      <h2 class="typing">Hoje, eu rogo a Deus...</h2>
+      <p class="typing-second">Para que Ele te encha de saúde, paz e alegria!</p>
+    </div>
+    <div id="step8" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/3zJqDw6.jpg');"></div>
+      <h2 class="typing">E você pode ter certeza...</h2>
+      <p class="typing-second">Eu estarei sempre aqui, torcendo e apoiando você!</p>
+    </div>
+    <div id="step9" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/NSBtxFL.jpg');"></div>
+      <h2 class="typing">E farei o que for preciso...</h2>
+      <p class="typing-second">Para que você nunca mais se sinta sozinha novamente!</p>
+    </div>
+    <div id="step10" class="message-container">
+      <div class="bg-layer" style="background-image: url('https://imgur.com/SLqBYGO.jpg');"></div>
+      <h2> Pra finalizar...</h2>
+      <p>Estou te enviando um presente simples, mas de coração! 💖</p>
+    </div>
+  </div>
+
+  <audio id="audio" src="audio.mp3" preload="auto"></audio>
+
+  <script>
+    let currentStep = 1;
+    let audio = document.getElementById('audio'); // Seleciona o elemento de áudio
+
+    function showNextStep() {
+      // Reproduz o áudio
+      audio.play();
+
+      // Oculta a etapa atual com uma transição suave
+      document.getElementById('step' + currentStep).style.opacity = 0;
+
+      // Exibe a próxima etapa com uma transição suave
+      currentStep++;
+      if (currentStep > 10) {
+        currentStep = 10; // Fica no step 10 após a última etapa
+      }
+      let nextStep = document.getElementById('step' + currentStep);
+      
+      nextStep.style.display = 'flex';
+      setTimeout(() => {
+        nextStep.style.opacity = 1;
+      }, 10);
+
+      // Reinicia o efeito de digitação nos elementos com classe "typing" e "typing-second"
+      let texts = nextStep.querySelectorAll('.typing, .typing-second');
+      texts.forEach(text => {
+        text.style.animation = 'none';
+        void text.offsetWidth; // Força reflow para reiniciar a animação
+        text.style.animation = text.classList.contains('typing') 
+          ? 'typing 5s steps(40) forwards' 
+          : 'typing 5s steps(40) 5s forwards';
+      });
+      
+      // Garante que o <p> se torne visível após o <h2> terminar
+      let pText = nextStep.querySelector('.typing-second');
+      setTimeout(() => {
+        pText.style.visibility = 'visible';
+      }, 5000);
+    }
+
+    // Troca de etapa a cada 13 segundos
+    setInterval(() => {
+      if (currentStep < 10) {
+        showNextStep();
+      }
+    }, 13000);
+
+    // Exibe a etapa 1 imediatamente
+    document.getElementById('step1').style.display = 'flex';
+    setTimeout(() => {
+      document.getElementById('step1').style.opacity = 1;
+    }, 10);
+
+    // Para a etapa 1, também garante que o <p> seja visível após 5 segundos
+    let initialP = document.querySelector('#step1 .typing-second');
+    setTimeout(() => {
+      initialP.style.visibility = 'visible';
+    }, 5000);
+  </script>
+</body>
+</html>
